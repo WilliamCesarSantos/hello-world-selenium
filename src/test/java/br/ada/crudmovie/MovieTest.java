@@ -1,6 +1,5 @@
 package br.ada.crudmovie;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
@@ -20,7 +19,6 @@ public class MovieTest {
 
     @BeforeAll
     public static void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(
                 new ChromeOptions().addArguments("--remote-allow-origins=*")
         );
